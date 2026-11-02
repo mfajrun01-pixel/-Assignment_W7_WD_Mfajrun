@@ -1,3 +1,122 @@
-body{
-    background-color: blue;
+:root {
+    color-scheme: dark;
+    --bg-primary: #;
+    --bg-secondary: #111113;
+    --bg-card: #18181b;
+    --nav-bg: #101012;
+    --text-main: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --btn-bg: #d4af78;
+    --btn-hover: #bd965e;
+    --border-subtle: #2b2b30;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--btn-bg);
+    color: #111113;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover);
+}
+
+.bg-white,
+[class~="bg-white/80"] {
+    background-color: var(--bg-secondary);
+}
+
+.bg-slate-900 {
+    background-color: var(--nav-bg);
+}
+
+.text-slate-900 {
+    color: var(--text-main);
+}
+
+.text-slate-600 {
+    color: var(--text-muted);
+}
+
+.border-slate-300,
+.border-slate-800 {
+    border-color: var(--border-subtle);
+}
+
+.bg-blue-600 {
+    background-color: var(--btn-bg);
+}
+
+.border-blue-600 {
+    border-color: var(--btn-bg);
+}
+
+[class~="hover:bg-blue-700"]:hover {
+    background-color: var(--btn-hover);
+}
+
+[class~="hover:text-blue-700"]:hover,
+[class~="dark:hover:text-blue-400"]:hover {
+    color: var(--btn-bg);
+}
+
+[class~="focus-visible:ring-blue-500"]:focus-visible {
+    --tw-ring-color: var(--btn-bg);
+}
+
+.glass-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-subtle);
+}
+
+.contact-item-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-item-card:hover {
+    border-color: #52525b;
+    transform: translateY(-2px);
+}
+
+.social-icon-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon-card:hover {
+    transform: translateY(-3px);
+}
+
+.custom-input:focus {
+    border-color: var(--btn-bg);
+    box-shadow: 0 0 0 3px rgb(212 175 120 / 15%);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #52525b;
 }
